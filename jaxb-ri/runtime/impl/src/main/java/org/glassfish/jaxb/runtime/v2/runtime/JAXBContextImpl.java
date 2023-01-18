@@ -717,7 +717,7 @@ public final class JAXBContextImpl extends JAXBRIContext {
 
     @Override
     public UnmarshallerImpl createUnmarshaller() {
-        return new UnmarshallerImpl(this,null);
+        return new UnmarshallerImpl(this,null, false);
     }
 
     @Override

@@ -67,7 +67,7 @@ public class BinderImpl<XmlNode> extends Binder<XmlNode> {
     
     private UnmarshallerImpl getUnmarshaller() {
         if(unmarshaller==null)
-            unmarshaller = new UnmarshallerImpl(context,assoc);
+            unmarshaller = new UnmarshallerImpl(context,assoc, false);
         return unmarshaller;
     }
 

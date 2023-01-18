@@ -79,9 +79,9 @@ import java.io.InputStream;
     private AttachmentUnmarshaller attachmentUnmarshaller;
     private IDResolver idResolver = new DefaultIDResolver();
 
-    public UnmarshallerImpl( JAXBContextImpl context, AssociationMap assoc ) {
+    public UnmarshallerImpl( JAXBContextImpl context, AssociationMap assoc, boolean eager ) {
         this.context = context;
-        this.coordinator = new UnmarshallingContext( this, assoc );
+        this.coordinator = new UnmarshallingContext( this, assoc, eager );
 
         try {
             setEventHandler(this);
